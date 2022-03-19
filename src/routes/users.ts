@@ -21,11 +21,19 @@ const users: MockConfig[] = [
           fixture: {
             base: fixUsersGet200,
           },
+          body: {
+            nameCustomBody: "John Doe"
+          }
         }
       },
       globalHeaders: {
         "custom-header": "{{custom-header}}",
       },
+      globalBody: {
+        myCustomJson: {
+          name: "John Doe"
+        }
+      }
     },
   },
   {

@@ -9,18 +9,17 @@
   - [x] Criar pasta `routes` responsável em ter todas as configurações de mocks
   - [x] Criar pasta `fixture` responsável por armazenar todos os arquivos mocks
 - [x] Dar suporte a rotas com parâmetros na URL. Exemplo `/users/:id`
-- [ ] Criar documentação da primeira versão
 
 # V2
-- [ ] Dar suporte para retornar um body global para determinado endereço
-- [ ] Dar suporte para retornar um body/header específico para determinado endereço + status code
+- [x] Dar suporte para retornar um body global para determinado endereço
+- [x] Dar suporte para retornar um body/header específico para determinado endereço + status code
 - [ ] Separar a organização de pasta no que é core do sistema + exemplos, afim de criar uma biblioteca
-- [ ] Criar documentação da primeira versão
+- [ ] Criar documentação
 
 # V3
 - [ ] Dar suporte a cacheamento
 - [ ] Dar suporte a clusterização
-- [ ] Criar documentação da primeira versão
+- [ ] Criar documentação
 
 
 # V4

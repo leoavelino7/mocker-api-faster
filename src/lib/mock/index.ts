@@ -33,7 +33,11 @@ class Mock {
     if (!expected) return null;
 
     const config = {
-      fixture: expected.fixture[type],
+      fixture: {
+        ...expected.fixture[type],
+        ...expected.body,
+        ...mockFound.expected.globalBody,
+      },
       statusCode: statusCodeExpected,
       headers: {
         ...mockFound.expected.globalHeaders,
