@@ -53,4 +53,4 @@ class Mock {
   }
 }
 
-export default new Mock();
+export const mock = new Mock();

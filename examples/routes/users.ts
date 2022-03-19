@@ -1,5 +1,4 @@
-import mock from "../lib/mock";
-import { MockConfig } from "../lib/mock/type";
+import { mock, MockConfig } from "mocker-api-faster";
 
 // GET
 import fixUsersGet200 from "../fixtures/users/users.get.200.json";
@@ -22,18 +21,18 @@ const users: MockConfig[] = [
             base: fixUsersGet200,
           },
           body: {
-            nameCustomBody: "John Doe"
-          }
-        }
+            nameCustomBody: "John Doe",
+          },
+        },
       },
       globalHeaders: {
         "custom-header": "{{custom-header}}",
       },
       globalBody: {
         myCustomJson: {
-          name: "John Doe"
-        }
-      }
+          name: "John Doe",
+        },
+      },
     },
   },
   {
@@ -45,8 +44,8 @@ const users: MockConfig[] = [
           fixture: {
             base: fixUsersGet200details,
           },
-        }
-      }
+        },
+      },
     },
   },
   {
