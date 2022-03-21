@@ -1,6 +1,6 @@
 ### Usage
 
-1. Clone the  [Example project](https://github.com/leoavelino7/mocker-api/tree/main/examples)
+1. Clone the  [Example project](https://github.com/leoavelino7/mocker-api-faster/tree/main/example)
 2. install the dependencies `yarn` or `npm install`
 3. Make the requests and see the results
 
