@@ -75,4 +75,4 @@ const users: MockConfig[] = [
   },
 ];
 
-mock.setMany(users);
+mock.addMany(users);

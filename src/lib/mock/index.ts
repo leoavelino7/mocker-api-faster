@@ -7,7 +7,7 @@ class Mock {
     this.mocks = {};
   }
 
-  set(config: MockConfig) {
+  add(config: MockConfig) {
     try {
       const mockId = `${config.method}_${config.url}`;
       if (this.mocks[mockId]) {
@@ -19,8 +19,8 @@ class Mock {
     }
   }
 
-  setMany(configs: MockConfig[]) {
-    configs.forEach((config) => this.set(config));
+  addMany(configs: MockConfig[]) {
+    configs.forEach((config) => this.add(config));
   }
 
   get(mockId: string, statusCodeExpected: number, type: string): MockResponse {
