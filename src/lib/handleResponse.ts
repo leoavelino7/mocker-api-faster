@@ -2,7 +2,9 @@ import { Request, Response } from "express";
 import { mock } from "./mock";
 import { MockResponse } from "./mock/type";
 
-const handleResponse = (request: Request, response: Response) => {
+const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
+const handleResponse = async (request: Request, response: Response) => {
   let mockResponse: MockResponse = null;
 
   const mockId = `${request.method}_${request.route.path}`.toLowerCase();
@@ -15,10 +17,21 @@ const handleResponse = (request: Request, response: Response) => {
   }
 
   if (mockResponse) {
+
+    const headerApplyDelay = Number(
+      request.headers["expected-delay"]
+    );
+
+    let delay = mockResponse.fixture?.delay ?? 0;
+
+    if(!Number.isNaN(headerApplyDelay)) delay = headerApplyDelay;
+
+    if(delay) await sleep(delay);
+
     return response
       .header(mockResponse.headers)
       .status(mockResponse.statusCode)
-      .json(mockResponse.fixture)
+      .json(mockResponse.fixture.file)
       .end();
   }
 

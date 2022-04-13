@@ -1,26 +1,28 @@
-import { MockConfig, MockResponse } from "./type";
+import { MockItem, MockResponse } from "./type";
 
 class Mock {
-  mocks: Record<string, MockConfig>;
+  mocks: Record<string, MockItem>;
 
   constructor() {
     this.mocks = {};
   }
 
-  add(config: MockConfig) {
+  add(mockItem: MockItem) {
+    const mockId = `${mockItem.method}_${mockItem.path}`.toLowerCase();
     try {
-      const mockId = `${config.method}_${config.url}`;
       if (this.mocks[mockId]) {
         throw new Error(`This address is already registered: ${mockId}`);
       }
-      this.mocks[mockId] = config;
+      this.mocks[mockId] = mockItem;
     } catch (error) {
       console.error(error);
+    } finally {
+      return mockId;
     }
   }
 
-  addMany(configs: MockConfig[]) {
-    configs.forEach((config) => this.add(config));
+  addMany(configs: MockItem[]) {
+    return configs.map((config) => this.add(config));
   }
 
   get(mockId: string, statusCodeExpected: number, type: string): MockResponse {
@@ -28,7 +30,7 @@ class Mock {
 
     if (!mockFound) return null;
 
-    const expected = mockFound.expected.fixtures[statusCodeExpected];
+    const expected = mockFound.expected.response[statusCodeExpected];
 
     if (!expected) return null;
 
