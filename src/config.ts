@@ -1,4 +1,6 @@
 export type Config = {
+  FIXTURE_PATH: string;
+  ROUTES_PATH: string;
   PORT: number;
   URL_INIT: string;
   URL_MOCKS_LIST: string;
@@ -9,6 +11,8 @@ export type Config = {
 const PORT = 3333;
 
 export const defaultConfig: Config = {
+  FIXTURE_PATH: "",
+  ROUTES_PATH: "",
   PORT,
   URL_INIT: "/",
   URL_MOCKS_LIST: "/mocks",

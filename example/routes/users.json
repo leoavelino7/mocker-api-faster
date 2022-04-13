@@ -1,0 +1,60 @@
+{
+  "config": {
+    "prefix_path": "/users",
+    "prefix_fixture": "/users/"
+  },
+  "routes": [
+    {
+      "method": "GET",
+      "expected": {
+        "response": {
+          "200": {
+            "fixture": {
+              "base": { "file": "users.get.200.json", "delay": 5000 }
+            },
+            "body": {
+              "specific-custom-name": "John Doe"
+            }
+          }
+        },
+        "global_headers": {
+          "key-custom-header": "value-custom-header"
+        },
+        "global_body": {
+          "global-custom-name": "John Doe"
+        }
+      }
+    },
+    {
+      "path": "/:id",
+      "method": "GET",
+      "expected": {
+        "response": {
+          "200": {
+            "fixture": {
+              "base": { "file": "users.get.200.details.json" }
+            }
+          }
+        }
+      }
+    },
+    {
+      "method": "POST",
+      "expected": {
+        "response": {
+          "201": {
+            "fixture": {
+              "base": { "file": "users.post.201.json" }
+            }
+          },
+          "400": {
+            "fixture": {
+              "base": { "file": "users.post.400.json" },
+              "conflict": { "file": "users.post.400.conflict.json" }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

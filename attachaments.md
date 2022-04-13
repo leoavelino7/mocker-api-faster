@@ -12,9 +12,11 @@
 - [x] Dar suporte para retornar um body global para determinado endereço
 - [x] Dar suporte para retornar um body/header específico para determinado endereço + status code
 - [x] Separar a organização de pasta no que é core do sistema + exemplos, afim de criar uma biblioteca
-- [ ] Criar documentação
+- [x] Criar documentação
 
 # V2
+- [x] Configuração é através de um JSON
+- [x] É possível ter um delay para cada rota
 - [ ] Dar suporte a cacheamento
 - [ ] Dar suporte a clusterização
 - [ ] Criar documentação
