@@ -17,6 +17,7 @@
     "typescript": "4.6.2"
   },
   "dependencies": {
+    "dotenv": "16.0.0",
     "mocker-api-faster": "1.0.1"
   }
 }
