@@ -351,7 +351,7 @@ dot-prop@^5.2.0:
   dependencies:
     is-obj "^2.0.0"
 
-dotenv@^16.0.0:
+dotenv@16.0.0:
   version "16.0.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.0.0.tgz#c619001253be89ebb638d027b609c75c26e47411"
   integrity sha512-qD9WU0MPM4SWLPJy/r2Be+2WgQj8plChsyrCNQzW/0WjvcJQiKQJ9mH3ZgB3fxbUUxgc/11ZJ0Fi5KiimWGz2Q==
@@ -758,10 +758,10 @@ minimist@^1.2.0:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
   integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
 
-mocker-api-faster@1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/mocker-api-faster/-/mocker-api-faster-1.0.1.tgz#bbed9ed3d5fc2d0583c8669ffbdb14fad10e423c"
-  integrity sha512-J47q7yDzX3uX494XMzlHiOhxla1hDQ2mKf095sv95q8p4S24uhfSki1yt7WCUaqRZD60AvLXqb2Suvn0MvwNhA==
+mocker-api-faster@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/mocker-api-faster/-/mocker-api-faster-2.0.1.tgz#c91f7fe9024f9483b74007c810c3cdcddc7bd568"
+  integrity sha512-IeQC50CcPYheK7H3mUt0jNDlD6Ou2TRXWaHdtFgQ2ztaoixHKGwagFnDOu2+B+WC8q5SsvWB7GuRPdJbqJgU4g==
   dependencies:
     cors "2.8.5"
     express "4.17.3"
