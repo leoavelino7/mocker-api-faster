@@ -758,10 +758,10 @@ minimist@^1.2.0:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
   integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
 
-mocker-api-faster@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/mocker-api-faster/-/mocker-api-faster-2.0.1.tgz#c91f7fe9024f9483b74007c810c3cdcddc7bd568"
-  integrity sha512-IeQC50CcPYheK7H3mUt0jNDlD6Ou2TRXWaHdtFgQ2ztaoixHKGwagFnDOu2+B+WC8q5SsvWB7GuRPdJbqJgU4g==
+mocker-api-faster@2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/mocker-api-faster/-/mocker-api-faster-2.0.3.tgz#201d34569d72b043bb71f44de21f1117d5581eb0"
+  integrity sha512-DnZ5jW4KEDrX0CxuOx17DQyQlEX9zt+VXNCDiyLkycG8prrE8pfkDsCqtH8VICELYTC7GNGMscMv+QnNEhTPkw==
   dependencies:
     cors "2.8.5"
     express "4.17.3"

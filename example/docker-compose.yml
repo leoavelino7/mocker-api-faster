@@ -1,0 +1,17 @@
+version: "3.4"
+services:
+  api:
+    image: mocker
+    container_name: mocker-api-faster-example
+    ports:
+      - "${API_PORT}:8000"
+    volumes:
+      - "./routes:/home/mocker/routes"
+      - "./fixtures:/home/mocker/fixtures"
+    environment:
+      FIXTURE_PATH: ${FIXTURE_PATH}
+      ROUTES_PATH: ${ROUTES_PATH}
+      API_PORT: 8000
+      URL_INIT: ${URL_INIT}
+      URL_MOCKS_LIST: ${URL_MOCKS_LIST}
+      APP_NAME: ${APP_NAME}

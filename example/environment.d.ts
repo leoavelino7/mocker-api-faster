@@ -1,6 +1,7 @@
 declare global {
   namespace NodeJS {
     interface ProcessEnv {
+      NODE_ENV: "development" | "production";
       FIXTURE_PATH: string;
       ROUTES_PATH: string;
       API_PORT: string;

@@ -11,7 +11,7 @@ import {
   MockExpected,
   MockFixture,
   MockItem,
-} from "./lib/mock/type";
+} from "./lib/mock/types";
 
 export const registerRoutes = (app: Express, config: Config) => {
   if (existsSync(config.ROUTES_PATH)) {
@@ -47,7 +47,9 @@ export const registerRoutes = (app: Express, config: Config) => {
                   return {
                     ...previous,
                     [fixtureName]: {
-                      file: require(`${config.FIXTURE_PATH}${mockConfig.config.prefix_fixture ?? ""}${file}`),
+                      file: require(`${config.FIXTURE_PATH}${
+                        mockConfig.config.prefix_fixture ?? ""
+                      }${file}`),
                       ...rest,
                     },
                   };
