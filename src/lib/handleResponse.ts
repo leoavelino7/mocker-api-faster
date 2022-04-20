@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { mock } from "./mock";
-import { MockResponse } from "./mock/type";
+import { MockResponse } from "./mock/types";
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 

@@ -11,11 +11,16 @@ const {
   URL_INIT = "/",
   URL_MOCKS_LIST = "/mocks",
   APP_NAME = "API Mocker",
+  NODE_ENV,
 } = process.env;
 
+const isDevelopmentMode = NODE_ENV === "development";
+
+const getAbsolutePath = (path: string) => join(__dirname, isDevelopmentMode ? "" : "..", path);
+
 export const config: Config = {
-  FIXTURE_PATH: join(__dirname, FIXTURE_PATH),
-  ROUTES_PATH: join(__dirname, ROUTES_PATH),
+  FIXTURE_PATH: getAbsolutePath(FIXTURE_PATH),
+  ROUTES_PATH: getAbsolutePath(ROUTES_PATH),
   PORT: Number(API_PORT),
   URL_INIT,
   URL_MOCKS_LIST,

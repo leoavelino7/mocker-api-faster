@@ -6,8 +6,9 @@
   "license": "MIT",
   "main": "index.ts",
   "scripts": {
-    "start": "node ./build/index.js",
-    "dev": "nodemon ./index.ts",
+    "start": "NODE_ENV=production node ./build/index.js",
+    "dev": "NODE_ENV=development nodemon ./index.ts",
+    "docker:up": "docker-compose up --remove-orphans api",
     "build": "tsc --project ./"
   },
   "devDependencies": {

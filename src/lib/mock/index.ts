@@ -1,4 +1,4 @@
-import { MockItem, MockResponse } from "./type";
+import { MockItem, MockResponse } from "./types";
 
 class Mock {
   mocks: Record<string, MockItem>;
