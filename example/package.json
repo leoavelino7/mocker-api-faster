@@ -19,6 +19,6 @@
   },
   "dependencies": {
     "dotenv": "16.0.0",
-    "mocker-api-faster": "2.0.2"
+    "mocker-api-faster": "2.0.3"
   }
 }
